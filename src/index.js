@@ -15,6 +15,9 @@ function getBikes(zip) {
     if (this.status === 200) {
       console.log(serverResponse.bikes);
       showBikes(serverResponse);
+     
+    } else {
+      showError(apiCall, serverResponse);
     }
   });
   apiCall.open("GET", urlToSend, true);
@@ -24,7 +27,19 @@ function getBikes(zip) {
 // UI LOGIC //
 
 function showBikes(apiResponse) {
-  document.getElementById("showResults").innerText = `The first bike stolen is ${apiResponse.bikes[0].manufacturer_name} ${apiResponse.bikes[0].frame_model}`;
+  let divToUpdate = "";
+  for (let i = 0; i < apiResponse.bikes.length; i++) {
+    divToUpdate += `Bike stolen are: ${apiResponse.bikes[i].manufacturer_name} ${apiResponse.bikes[i].frame_model} `;
+  }
+  document.getElementById("showResults").innerText = divToUpdate;
+  console.log(apiResponse.status);
+  console.log(apiResponse.statusText);
+}
+
+function showError(request, apiResponse) {
+  document.getElementById("showResults").innerText = "There's an error.";
+  // document.querySelector("p#showResults").innerText = `There is an error accessing the bike located ${request.status} ${request.statusText}: ${apiResponse.message}`;
+
 }
 //add output above to match miro board
 
