@@ -7,9 +7,9 @@ export class Bikes {
       request.addEventListener("loadend", function () {
         const serverResponse = JSON.parse(this.responseText);
         if (this.status === 200) {
-          resolve([serverResponse]);
+          resolve(serverResponse);
         } else {
-          reject([this]);
+          reject(this);
         }
       });
       request.open("GET", urlToSend, true);
@@ -20,8 +20,8 @@ export class Bikes {
 
 export function uFunc(apiResponse) {
   let divToUpdate = "";
-  for (let i = 0; i < apiResponse[0].bikes.length; i++) {
-    divToUpdate += `Stolen Bike: ${apiResponse[0].bikes[i].frame_colors} ${apiResponse[0].bikes[i].manufacturer_name} ${apiResponse[0].bikes[i].frame_model} \n`;
+  for (let i = 0; i < apiResponse.bikes.length; i++) {
+    divToUpdate += `Stolen Bike: ${apiResponse.bikes[i].frame_colors} ${apiResponse.bikes[i].manufacturer_name} ${apiResponse.bikes[i].frame_model} \n`;
   }
   return divToUpdate;
 }
