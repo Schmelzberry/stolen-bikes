@@ -18,7 +18,7 @@ export class Bikes {
   }
 }
 
-export function uFunc(apiResponse) {
+export function populateShowResultsDiv(apiResponse) {
   let divToUpdate = "";
   for (let i = 0; i < apiResponse.bikes.length; i++) {
     divToUpdate += `Stolen Bike: ${apiResponse.bikes[i].frame_colors} ${apiResponse.bikes[i].manufacturer_name} ${apiResponse.bikes[i].frame_model} \n`;

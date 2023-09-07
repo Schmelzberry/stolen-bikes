@@ -1,7 +1,7 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
-import { Bikes, uFunc } from "./js/bike.js";
+import { Bikes, populateShowResultsDiv } from "./js/bike.js";
 import FetchBikeService from "./js/fetchBike.js";
 import AsyncBikeService from "./js/asyncBike";
 
@@ -18,7 +18,6 @@ function getFetchResults(city) {
 
 async function getASyncResults(city) {
   const response = await AsyncBikeService.getASyncBikes(city);
-  console.log(response);
   if (response.bikes) {
     showBikes(response);
   } else {
@@ -28,7 +27,7 @@ async function getASyncResults(city) {
 
 // UI LOGIC //
 function showBikes(apiResponse) {
-  document.getElementById("showResults").innerText = uFunc(apiResponse);
+  document.getElementById("showResults").innerText = populateShowResultsDiv(apiResponse);
 }
 
 function showError(request) {
