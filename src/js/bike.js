@@ -12,11 +12,11 @@ export class Bikes {
           reject([this]);
         }
       });
-        request.open("GET", urlToSend, true);
-        request.send();
+      request.open("GET", urlToSend, true);
+      request.send();
     });
   }
-}  
+}
 
 export function uFunc(apiResponse) {
   let divToUpdate = "";
@@ -25,4 +25,3 @@ export function uFunc(apiResponse) {
   }
   return divToUpdate;
 }
-  
