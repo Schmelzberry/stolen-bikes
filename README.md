@@ -1,55 +1,62 @@
-# (Application Name)
+# Stolen Bikes
 
-#### (Brief Description of Application)
+#### An exercise using various approaches to call an API and handle errors.
 
-#### By (Your Name Here)
+#### By Jon Cheng, Paul LeTourneau, Jake Elsberry
 
 ## Technologies Used
 
-* HTML
-* CSS
-* JavaScript
-* Bootstrap - 5.3.1
-* Node.js - v18.17.1
-* Node Package Manager - v9.8.1
-* Webpack - 5.88.2
-* Babel - 7.22.11
-* Jest - 29.6.4
-* ESLint - 8.48.0
+- HTML
+- CSS
+- JavaScript
+- Bootstrap - v5.3.1
+- Node.js - v18.17.1
+- Node Package Manager - v9.8.1
+- Webpack - v5.88.2
+- Babel - v7.22.11
+- ESLint - v8.48.0
 
 #### Plug-Ins, Loaders
 
- * clean-webpack-plugin: "4.0.0"
- * css-loader: "6.8.1"
- * eslint-webpack-plugin: "4.0.1"
- * html-webpack-plugin: "5.5.3"
- * webpack-cli: "5.1.4"
- * style-loader: "3.3.3"
- * webpack-cli: "5.1.4"
- * webpack-dev-server: "4.15.1"
- * @babel/ plugin-transform-modules-commonjs: "7.22.11"
-* html-loader: "4.2.0"
+- clean-webpack-plugin: "4.0.0"
+- css-loader: "6.8.1"
+- eslint-webpack-plugin: "4.0.1"
+- html-webpack-plugin: "5.5.3"
+- webpack-cli: "5.1.4"
+- style-loader: "3.3.3"
+- webpack-cli: "5.1.4"
+- webpack-dev-server: "4.15.1"
+- @babel/ plugin-transform-modules-commonjs: "7.22.11"
+- html-loader: "4.2.0"
 
 ## Description
-A Template Repo set up for automatic testing with Jest.
+
+A website bundled with webpack that allows users to see how many stolen bikes have been reported in a given area.
+
 ## Setup/Installation Requirements
 
-* Installing all packages with $ npm install.
-* Building the project using webpack with $ npm run build
-* Starting a development server with $ npm run start
-* Linting JS files in the src folder with $ npm run lint
-* Running tests with Jest using $ npm run test
+Cloning the Repository:
+
+- Clone the repository from the GitHub link: https://github.com/Schmelzberry/stolen-bikes
+- In your code editor, navigate to your project root directory. Create a file named ".env".
+- Open up ".env" and save in the first line: API_KEY=[your api key here] omitting the square brackets []
+
+- Navigate to the project's root directory. Install all packages with `$ npm install`.
+- Building the project using webpack with `$ npm run build`
+- Starting a development server with `$ npm run start`
+- Linting JS files in the src folder with `$ npm run lint`
+- Run tests using Jest with `$ npm run test`
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+- _Any known issues_
+- _should go here_
 
 ## License
 
 MIT License
 
-Copyright (c) [2023] Jake Elsberry
+Copyright (c) [2023] Jake Elsberry, Jon Cheng, Paul LeTourneau
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
