@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <title>Stolen Bikes</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Search for Stolen Bikes in Your Area</h1>
-    <form>
-      <label for="zipCode">Enter a zip code:</label>
-      <input id="zipCode" type="number" name="zipCode">
-      <button type="submit">Search</button>
-    </form>
-    <p id="showResults"></p>
-  </div> 
-</body>
+  <head>
+    <title>Stolen Bikes</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Search for Stolen Bikes in Your Area</h1>
+      <form id="api1">
+        <label for="zipCode">Enter a zip code:</label>
+        <input id="zipCode" type="number" name="zipCode" />
+        <button type="submit">Search</button>
+      </form>
+      <form id="api2">
+        <label for="cityState">Enter your city, followed by your state</label>
+        <input id="cityState" type="text" name="cityState" />
+        <button type="submit">Search</button>
+      </form>
+      <p id="showResults"></p>
+    </div>
+  </body>
 </html>
